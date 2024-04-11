@@ -7,26 +7,6 @@ import ThemeToggle from './components/ThemeToggle';
 //here ga create anay ako hin const context para matawag ha iba na jsx file ngan mamanage ko an context...
 export const ThemeContext = createContext();
 
-// gahimo sad ko ug provider para iset ang bug-os na sakop san TableWithCrud...
-const ThemeProvider = ({children}) => {
-  // gin initialize ko anay an darkmode ngan gigamitan setter para tawgon niyan as function para han toggle toggle san button...
-  const [darkMode, setDarkMode] = useState(false);
-
-  // create kog function na toggletheme para itoggle niyan fro light to dark vice versa...
-  const toggleTheme = () => {
-    // giset dd an darkmode into prevmode => !prevmode...
-    setDarkMode(prevMode => !prevMode);
-  };
-
-  return (
-    // here is giwrap ko na an themecontext ha provider tas gintawag ko an darkmode na initializer for toggling, ngan an toggle theme...
-    // so once ga pindot adto na toggle button, nattrigger an light mode na default value han darkmode and toggletheme na magiging dark mode na...
-    <ThemeContext.Provider value={{ darkMode, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-};
-
 const TableWithCRUD = () => {
   // here gigamitan kog object destructuring syntax para tawgon an default mode nga light mode wherein an darkmode since naka false man hiya...
   const { darkMode } = useContext(ThemeContext);
@@ -114,12 +94,21 @@ const TableWithCRUD = () => {
 };
 
 const App = () => {
+  // gin initialize ko anay an darkmode ngan gigamitan setter para tawgon niyan as function para han toggle toggle san button...
+  const [darkMode, setDarkMode] = useState(false);
+
+  // create kog function na toggletheme para itoggle niyan fro light to dark vice versa...
+  const toggleTheme = () => {
+    // giset dd an darkmode into prevmode => !prevmode...
+    setDarkMode(prevMode => !prevMode);
+  };
+
   return (
-    // gitawag naman here an themeprovider wherein ga toggle ni from light to dark...
-    <ThemeProvider>
-      {/* gi wrap sa themeprovider and tablewithcrud... */}
-      <TableWithCRUD />
-    </ThemeProvider>
+    // here is giwrap ko na an themecontext ha provider tas gintawag ko an darkmode na initializer for toggling, ngan an toggle theme...
+    // so once ga pindot adto na toggle button, nattrigger an light mode na default value han darkmode and toggletheme na magiging dark mode na...
+    <ThemeContext.Provider value={{ darkMode, toggleTheme }}>
+    <TableWithCRUD />
+    </ThemeContext.Provider>
   );
 };
 
