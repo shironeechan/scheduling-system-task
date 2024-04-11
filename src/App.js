@@ -10,7 +10,7 @@ export const ThemeContext = createContext();
 const TableWithCRUD = () => {
   // here gigamitan kog object destructuring syntax para tawgon an default mode nga light mode wherein an darkmode since naka false man hiya...
   const { darkMode } = useContext(ThemeContext);
-   // ginaarray sini na part ang mga data...
+  // ginaarray sini na part ang mga data...
   const [data, setData] = useState([]);
   // ginaset ang mga data...
   const [formData, setFormData] = useState({
@@ -78,8 +78,8 @@ const TableWithCRUD = () => {
   return (
     <div className={darkMode ? 'dark' : 'light'}>
       <form onSubmit={handleAddOrUpdate}>
-        {/* // gi tawag here ang input form para ma load ang form ngan mahandle ang change once naay ig input dira sa fields... */}
-        <InputForm formData={formData} handleChange={handleChange} />
+        {/* //   gi tawag here ang input form para ma load ang form ngan mahandle ang change once naay ig input dira sa fields... */}
+        <InputForm formData={formData} handleChange={handleChange}/>
         <br/>
         <button type="submit" className='addButton'>{editId !== null ? 'Edit' : 'Add'}</button>
       </form>
