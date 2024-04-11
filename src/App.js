@@ -87,7 +87,7 @@ const TableWithCRUD = () => {
     localStorage.setItem('dataStorage', JSON.stringify(data));
   }, [data]);
 
-  // gi load an data sa localstorage ngan may key nga inputDatatoTableToLocalStorage...
+  // gi load an data sa localstorage ngan may key nga dataStorage...
   useEffect(() => {
     const savedData = localStorage.getItem('dataStorage');
     if (savedData) {
