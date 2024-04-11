@@ -84,12 +84,12 @@ const TableWithCRUD = () => {
 
   // save data to local storage when data changes diretso array...
   useEffect(() => {
-    localStorage.setItem('inputDatatoTableToLocalStorage', JSON.stringify(data));
+    localStorage.setItem('dataStorage', JSON.stringify(data));
   }, [data]);
 
   // gi load an data sa localstorage ngan may key nga inputDatatoTableToLocalStorage...
   useEffect(() => {
-    const savedData = localStorage.getItem('inputDatatoTableToLocalStorage');
+    const savedData = localStorage.getItem('dataStorage');
     if (savedData) {
       setData(JSON.parse(savedData));
     }
