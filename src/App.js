@@ -93,7 +93,7 @@ const TableWithCRUD = () => {
     if (savedData) {
       setData(JSON.parse(savedData));
     }
-  }, []); // gi-array sad...
+  }, []);
 
   return (
     <div className={darkMode ? 'dark' : 'light'}>
