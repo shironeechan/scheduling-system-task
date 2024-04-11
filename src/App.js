@@ -78,7 +78,7 @@ const TableWithCRUD = () => {
   return (
     <div className={darkMode ? 'dark' : 'light'}>
       <form onSubmit={handleAddOrUpdate}>
-        {/* //   gi tawag here ang input form para ma load ang form ngan mahandle ang change once naay ig input dira sa fields... */}
+        {/* gi tawag here ang input form para ma load ang form ngan mahandle ang change once naay ig input dira sa fields... */}
         <InputForm formData={formData} handleChange={handleChange}/>
         <br/>
         <button type="submit" className='addButton'>{editId !== null ? 'Edit' : 'Add'}</button>
