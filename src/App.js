@@ -3,6 +3,10 @@ import './App.css';
 import InputForm from './components/InputForm';
 import Table from './components/Table';
 import ThemeToggle from './components/ThemeToggle';
+import { Router, Routes, Route } from 'react-router-dom'
+import { Home } from '../pages/Home';
+import { SignUp } from '../pages/SignUp';
+import { PrivateRoutes } from '../router/PrivateRoutes';
 
 //here ga create anay ako hin const context para matawag ha iba na jsx file ngan mamanage ko an context...
 export const ThemeContext = createContext();
@@ -77,6 +81,16 @@ const TableWithCRUD = () => {
 
   return (
     <div className={darkMode ? 'dark' : 'light'}>
+      <Router>
+        <Routes>
+          <Route element={<PrivateRoutes />}>
+          <Route element={<Home />} path="/" exact/>
+          <Route element={<About />} path="/about"/>
+          </Route>
+          <Route element={<SignUp />} path="/signup"/>
+        </Routes>
+      </Router>
+
       <form onSubmit={handleAddOrUpdate}>
         {/* gi tawag here ang input form para ma load ang form ngan mahandle ang change once naay ig input dira sa fields... */}
         <InputForm formData={formData} handleChange={handleChange}/>
