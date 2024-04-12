@@ -1,7 +1,15 @@
 import React from 'react'
+import { Navbar } from '../components/Navbar'
+import { Outlet } from 'react-router-dom'
 
 export const SignUp = () => {
   return (
-    <div className='signup'>Sign Up</div>
+    <div>
+      <Navbar />
+      <Outlet />
+      <br/>
+      <hr/>
+      <h2>Sign Up</h2>
+    </div>
   )
 }

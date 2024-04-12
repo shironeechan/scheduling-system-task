@@ -3,11 +3,13 @@ import './App.css';
 import InputForm from './components/InputForm';
 import Table from './components/Table';
 import ThemeToggle from './components/ThemeToggle';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom'
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { SignUp } from './pages/SignUp';
 import { PrivateRoutes } from './router/PrivateRoutes';
+import { Navbar } from './components/Navbar';
+import { ErrorPage } from './pages/ErrorPage';
 
 
 //here ga create anay ako hin const context para matawag ha iba na jsx file ngan mamanage ko an context...
@@ -83,6 +85,10 @@ const TableWithCRUD = () => {
 
   return (
     <div className={darkMode ? 'dark' : 'light'}>
+      <Navbar />
+      <Outlet />
+      <br/>
+      <hr/>
       <form onSubmit={handleAddOrUpdate}>
         {/* gi tawag here ang input form para ma load ang form ngan mahandle ang change once naay ig input dira sa fields... */}
         <InputForm formData={formData} handleChange={handleChange}/>
@@ -95,6 +101,7 @@ const TableWithCRUD = () => {
       <br/>
       {/* gitawag naman dd an theme toggle para ssan dark and light mode, pero an natotoggle la hini is an children, diri an bugos na webpage... */}
       <ThemeToggle />
+      <br/>
     </div>
   );
 };
@@ -121,6 +128,7 @@ const App = () => {
           <Route element={<About />} path="/about"/>
           </Route>
           <Route element={<SignUp />} path="/signup"/>
+          <Route element={<ErrorPage />} path="*"/>
         </Routes>
       </Router>
     </ThemeContext.Provider>
