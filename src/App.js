@@ -3,10 +3,12 @@ import './App.css';
 import InputForm from './components/InputForm';
 import Table from './components/Table';
 import ThemeToggle from './components/ThemeToggle';
-import { Router, Routes, Route } from 'react-router-dom'
-import { Home } from '../pages/Home';
-import { SignUp } from '../pages/SignUp';
-import { PrivateRoutes } from '../router/PrivateRoutes';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Home } from './pages/Home';
+import { About } from './pages/About';
+import { SignUp } from './pages/SignUp';
+import { PrivateRoutes } from './router/PrivateRoutes';
+
 
 //here ga create anay ako hin const context para matawag ha iba na jsx file ngan mamanage ko an context...
 export const ThemeContext = createContext();
@@ -81,16 +83,6 @@ const TableWithCRUD = () => {
 
   return (
     <div className={darkMode ? 'dark' : 'light'}>
-      <Router>
-        <Routes>
-          <Route element={<PrivateRoutes />}>
-          <Route element={<Home />} path="/" exact/>
-          <Route element={<About />} path="/about"/>
-          </Route>
-          <Route element={<SignUp />} path="/signup"/>
-        </Routes>
-      </Router>
-
       <form onSubmit={handleAddOrUpdate}>
         {/* gi tawag here ang input form para ma load ang form ngan mahandle ang change once naay ig input dira sa fields... */}
         <InputForm formData={formData} handleChange={handleChange}/>
@@ -121,7 +113,16 @@ const App = () => {
     // here is giwrap ko na an themecontext ha provider tas gintawag ko an darkmode na initializer for toggling, ngan an toggle theme...
     // so once ga pindot adto na toggle button, nattrigger an light mode na default value han darkmode and toggletheme na magiging dark mode na...
     <ThemeContext.Provider value={{ darkMode, toggleTheme }}>
-    <TableWithCRUD />
+    <Router>
+        <Routes>
+        <Route element={<PrivateRoutes />}>
+          <Route element={<TableWithCRUD />} path="/" exact/>
+          <Route element={<Home />} path="/home"/>
+          <Route element={<About />} path="/about"/>
+          </Route>
+          <Route element={<SignUp />} path="/signup"/>
+        </Routes>
+      </Router>
     </ThemeContext.Provider>
   );
 };
