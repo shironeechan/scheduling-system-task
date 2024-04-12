@@ -7,8 +7,6 @@ export const Home = () => {
     <div>
         <Navbar />
         <Outlet />
-        <br/>
-        <hr/>
         <h2>Home</h2>
     </div>
   )

@@ -128,7 +128,7 @@ const App = () => {
           <Route element={<About />} path="/about"/>
           </Route>
           <Route element={<SignUp />} path="/signup"/>
-          <Route element={<ErrorPage />} path="*"/>
+          <Route element={<ErrorPage />} path="*" />
         </Routes>
       </Router>
     </ThemeContext.Provider>

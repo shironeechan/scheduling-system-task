@@ -7,8 +7,6 @@ export const SignUp = () => {
     <div>
       <Navbar />
       <Outlet />
-      <br/>
-      <hr/>
       <h2>Sign Up</h2>
     </div>
   )

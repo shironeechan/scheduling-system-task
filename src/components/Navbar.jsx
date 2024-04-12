@@ -20,6 +20,8 @@ export const Navbar = () => {
                     <span onClick={() => {window.location.href="/signup"}}>Sign Up</span>
                 </li>
             </ul>
+            <br/>
+            <hr/>
         </nav>
         <Outlet />
     </div>
