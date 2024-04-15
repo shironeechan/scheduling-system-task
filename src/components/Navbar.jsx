@@ -8,20 +8,19 @@ export const Navbar = () => {
             <ul>
                 <br/>
                 <li>
-                    <span onClick={() => {window.location.href="/home"}}>Home</span>
+                    <span className='navbarClass' onClick={() => {window.location.href="/home"}}>Home</span>
                 </li>
                 <li>
-                    <span onClick={() => {window.location.href="/"}}>Scheduling</span>
+                    <span className='navbarClass' onClick={() => {window.location.href="/"}}>Scheduling</span>
                 </li>
                 <li>
-                    <span onClick={() => {window.location.href="/about"}}>About</span>
+                    <span className='navbarClass' onClick={() => {window.location.href="/about"}}>About</span>
                 </li>
                 <li>
-                    <span onClick={() => {window.location.href="/signup"}}>Sign Up</span>
+                    <span className='navbarClass' onClick={() => {window.location.href="/signup"}}>Sign Up</span>
                 </li>
             </ul>
             <br/>
-            <hr/>
         </nav>
         <Outlet />
     </div>

@@ -1,410 +1,119 @@
-/* .App
+nav
 {
-  text-align: center;
-}
-
-body
-{
-  box-sizing: border-box;
-  background-color: darkgray;
-}
-
-table
-{
-  font-size: 25px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: bold;
-	border: 2px solid gray;
-	width: 800px;
-	height: 200px;
-  border-spacing: 20px;
-  position: center;
-}
-
-.centerTable
-{
-    margin: auto;
-    padding: 10px;
-}
-
-th
-{
-	border-bottom: 2px solid white;
-  border-right: 2px white;
-  border-spacing: 20px;
-  text-align: left;
-  padding-bottom: 10px;
-}
-
-tr
-{
-  border-bottom: 2px solid white;
-  border-right: 2px white;
-  border-spacing: 20px;
-  text-align: left;
-  padding-bottom: 10px;
-  color: white;
-}
-
-td
-{
-	text-align: left;
-  color: white;
-}
-
-#checkBox
-{
-  width: 20px;
-  height: 20px;
-  top: 20%;
-}
-
-label
-{
-  font-size: 24px;
-  font-weight: 50%;
-  color: white;
-  padding: 50px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-input
-{
-  width: 200px;
-  height: 20px;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-  position: top;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 10s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: top;
-  justify-content: top;
-  font-size: calc(10px + 2vmin);  
-  color: white;
-}
-
-p
-{
-  font-size: 35px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: bold;
-  align-items: center;
-  position: 45%;
-}
-
-.App-link {
-  color: skyblue;
-  position: absolute;
-  right: 16px;
-  top: 8px;
-  font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: bold;
-}
-
-.inputClass
-{
-  font-size: 30px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  left: 30%;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* * {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 22px;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-h3 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-h4 {
-  margin-top: 0;
-  font-size: 16px;
-}
-
-h5 {
-  margin-top: 0;
-  font-size: 14px;
-}
-
-h6 {
-  margin-top: 0;
-  font-size: 12px;
-}
-
-code {
-  font-size: 1.2em;
-}
-
-ul {
-  padding-inline-start: 20px;
-}
-
-.panel-light,
-.panel-dark {
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 20px;
-  margin-bottom: 10px;
-}
-.panel-light {
-  color: #222;
-  background: #fff;
-}
-
-.panel-dark {
-  color: #fff;
-  background: rgb(23, 32, 42);
-}
-
-.button-light,
-.button-dark {
-  border: 1px solid #777;
-  padding: 5px;
-  margin-right: 10px;
-  margin-top: 10px;
-}
-
-.button-dark {
-  background: #222;
-  color: #fff;
-}
-
-.button-light {
-  background: #fff;
-  color: #222;
-}
-  */
-.light
-{
-    background-color: #ffffff;
-    color: #000000;
-}
-  
-.dark
-{
-    background-color: #121212;
-    color: #ffffff;
-}
-
-div
-{
-  cursor: pointer;
-  align-items: center;
-}
-
-h1
-{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: bold;
-  text-align: center;
-  color: black;
-}
-
-.dark h1
-{
-  color: pink;
-}
-
-body
-{
-  box-sizing: border-box;
-  background-color: white;
-  color: black;
-  margin: 0;
-}
-
-.light table, .light td, .light th, .light tr
-{
-  color: black;
-  border: 1px solid black;
-}
-
-.dark table, .dark td, .dark tr
-{
-  color: white;
-  border: 1px solid white;
-}
-
-table
-{
-	width: 100%;
-	height: 100px;
-}
-
-.centerTable
-{
-    margin: auto;
-}
-
-th
-{
-  text-align: left;
-  font-size: 23px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: bold;
-  padding: 10px;
-  background: #84c7f3;
-}
-
-.dark th
-{
-  color: black;
-  border: 1px solid white;
-}
-
-tr
-{
-  text-align: left;
-}
-
-tr:nth-child(even)
-{
-  background: #949393;
-}
-
-td
-{
-  font-size: 22px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	text-align: left;
-  padding-left: 10px;
-}
-
-#checkBox
-{
-  width: 20px;
-  height: 20px;
-  top: 20%;
-}
-
-input
-{
-  width: 200px;
-  height: 20px;
-  font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
-}
-
-label
-{
-  font-size: 23px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  position: center;
-}
-
-button
-{
-  font-size: 18px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border-radius: 10px;
-  box-sizing: border-box;
-  width: 65px;
-  height: 25px;
-  background-color: royalblue;
-}
-
-.addButton
-{
-  position: absolute;
-  top: 215px;
-  right: 16px;
-}
-
-.light button
-{
-  color: black;
-}
-
-.dark button
-{
-  color: white;
-}
-
-button:hover
-{
-  background-color: blue;
-}
-
-.toggle
-{
-  font-size: 18px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border-radius: 10px;
-  box-sizing: border-box;
-  width: 120px;
-  height: 30px;
-  color: white;
-  background-color: royalblue;
-  position: absolute;
-  top: 30px;
-  right: 16px;
-}
-
-h2
-{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 50px;
-  text-align: center;
-  font-weight: bold;
+  @apply pb-0 bg-gray-500;
 }
 
 ul
 {
-  padding: 0;
+  @apply flex items-center justify-start px-8 py-4 pb-0;
 }
 
-li
+.navbarClass
 {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 20px;
+  @apply mr-6 text-white hover:text-gray-300;
 }
 
-span
+.divClass
 {
-  padding: 5px 10px;
-  /* border: 1px solid #ccc;
-  border-radius: 5px; */
+  @apply relative flex items-center mb-4;
+}
+
+h1
+{
+  @apply inline-block pb-10 font-sans text-3xl font-bold text-center text-black w-fit;
+}
+
+h2
+{
+  @apply pt-10 font-sans text-3xl font-bold text-center text-black;
+}
+
+.formClass
+{
+  @apply max-w-md mx-auto;
+}
+.labelClass
+{
+  @apply block mb-2 text-lg font-bold text-black;
+}
+
+.input-field
+{
+  @apply h-10 p-2 transition duration-300 ease-in-out border-2 border-blue-400 pl-9 w-96 rounded-xl;
+}
+
+.input-field:hover, .input-time:hover
+{
+  @apply bg-blue-200;
+}
+
+.input-time
+{
+  @apply w-auto h-10 p-2 transition duration-300 ease-in-out border-2 border-blue-400 pl-9 rounded-xl;
+}
+
+.iconClass
+{
+  @apply absolute items-center m-2 text-gray-500 size-5;
+}
+
+.addButton, .editButton, .deleteButton, .toggleButton
+{
+  @apply w-20 h-6 text-white bg-blue-500 rounded-xl focus:outline-none;
+}
+
+.addButton:hover, .editButton:hover, .deleteButton:hover, .toggleButton:hover
+{
+  @apply bg-blue-700;
+}
+
+.toggleButton
+{
+  @apply absolute top-0 right-0 m-4;
+}
+
+.light, .light h1, .light input
+{
+  @apply text-black bg-white;
+}
+
+.dark, .dark h1, .dark input
+{
+  @apply text-white bg-gray-900;
+}
+
+body
+{
+  @apply m-0 font-sans;
+}
+
+.container
+{
+  @apply min-h-screen;
+}
+
+table
+{
+  @apply w-full border-collapse;
+}
+
+th, td {
+  @apply px-4 py-2 border;
+}
+
+th {
+  @apply font-bold text-left bg-blue-500;
+}
+
+.light tr:nth-child(even) {
+  @apply bg-gray-300;
+}
+
+.dark tr:nth-child(even) {
+  @apply bg-gray-500;
+}
+
+.parentDivClass
+{
+  @apply relative;
 }

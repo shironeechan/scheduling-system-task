@@ -6,6 +6,7 @@ const Table = ({ data, handleEdit, handleDelete }) => {
 
   return (
     <div className={darkMode ? 'dark' : 'light'}>
+      <br/>
       <table>
         <thead>
           <tr>
@@ -28,13 +29,14 @@ const Table = ({ data, handleEdit, handleDelete }) => {
               <td>{item.arrivalTime}</td>
               <td>{item.transportationType}</td>
               <td>
-                <button onClick={() => handleEdit(item.id)}>Edit</button>
-                <button onClick={() => handleDelete(item.id)}>Delete</button>
+                <button className='editButton' onClick={() => handleEdit(item.id)}>Edit</button>
+                <button className='deleteButton' onClick={() => handleDelete(item.id)}>Delete</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      
     </div>
   );
 };

@@ -88,20 +88,15 @@ const TableWithCRUD = () => {
       <Navbar />
       <Outlet />
       <br/>
-      <hr/>
-      <form onSubmit={handleAddOrUpdate}>
+      <form className="formClass" onSubmit={handleAddOrUpdate}>
         {/* gi tawag here ang input form para ma load ang form ngan mahandle ang change once naay ig input dira sa fields... */}
         <InputForm formData={formData} handleChange={handleChange}/>
-        <br/>
-        <button type="submit" className='addButton'>{editId !== null ? 'Edit' : 'Add'}</button>
+        <button type="submit" className='addButton'>{editId === null ? 'Add' : 'Edit'}</button>
       </form>
-      <br/>
       {/* here naman is gitawag an table component para an data ngan mainput ug masave sa table is maedit ug madelete... */}
       <Table data={data} handleEdit={handleEdit} handleDelete={handleDelete} />
-      <br/>
       {/* gitawag naman dd an theme toggle para ssan dark and light mode, pero an natotoggle la hini is an children, diri an bugos na webpage... */}
       <ThemeToggle />
-      <br/>
     </div>
   );
 };
