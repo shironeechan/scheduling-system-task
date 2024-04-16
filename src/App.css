@@ -117,3 +117,12 @@ th {
 {
   @apply relative;
 }
+
+.div2
+{
+  @apply relative;
+}
+.icon2
+{
+  @apply absolute items-center;
+}

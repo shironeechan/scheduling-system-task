@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 export const SignUp = () => {
   return (
-    <div>
+    <div className='div2'>
       <Navbar />
       <Outlet />
       <h2>Sign Up</h2>

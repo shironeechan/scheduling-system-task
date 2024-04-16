@@ -8,7 +8,8 @@ const InputForm = ({ formData, handleChange }) => {
 
   return (
     <div className={darkMode ? 'dark' : 'light'}>
-      <h1>DEPARTURE AND ARRIVAL SCHEDULING</h1>
+      <br/>
+      <h1>Departure and Arrival Scheduling</h1>
       <br/>
 
       <div className="divClass">
